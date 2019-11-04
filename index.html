@@ -1,0 +1,27 @@
+<!-- Ejercicio de práctica del módulo 2 CSS - Práctica P6b
+
+Crea una estructura HTML al que se le puedan aplicar las siguientes reglas de estilo:
+Todos los <p> hijos directos de un <div> deberán tener un borde de 2px, sólido y de color #fabada
+Todos los <p> que sean primer elemento del div deberán tener una clase “importante”.
+Sólos <p> que estén al lado de estos <p> con clase importante tendrán su color de texto a rojo. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Práctica P6b</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<p class="importante">Hijo directo del primer div</p>
+		<p>Hijo directo del primer div y hermano del primer p y al lado del p importante</p>
+		<div>
+			<p class="importante">Nieto del primer div e hijo directo del segundo div</p>
+			<p>Nieto del primer div e hijo directo del segundo div y hermano del p</p>
+			<p>Nieto del primer div e hijo directo del segundo div y hermano del p pero no al lado del p importante, por eso no está en rojo</p>
+		</div>
+	</div>
+	<p>p huérfano, no tiene el borde color fabada</p>
+</body>
+</html>
